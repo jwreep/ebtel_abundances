@@ -6,26 +6,31 @@
 \begin{document}
 
 % Title
-\title{An open source scientific article}
+\title{Modeling Time-Variable Elemental Abundances in Coronal Loop Simulations}
 
 % Author list
-\author{@jwreep}
+\author[0000-0003-4739-1152]{Jeffrey W. Reep}
+\affiliation{Institute for Astronomy, University of Hawai'i at M\=anoa, Pukalani, HI 96768}
+\email{reep@hawaii.edu}
 
-% Abstract with filler text
+\author[0000-0002-7983-3851]{John Unverferth}
+\affiliation{National Research Council Postdoc at the Naval Research Laboratory, Washington, DC 20375}
+
+\author[0000-0001-9642-6089]{Will T. Barnes}
+\affiliation{NASA Goddard Space Flight Center, Heliophysics Sciences Division, Greenbelt, MD 20771}
+\affiliation{Department of Physics, American University, Washington, DC 20016}
+
+\author[0000-0001-7754-0804]{Sherry Chhabra}
+\affiliation{George Mason University, Fairfax, VA, 22030}
+
+% Abstract 
 \begin{abstract}
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-    Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-    Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-    Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-    Phasellus eu tellus sit amet tortor gravida placerat.
-    Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-    Praesent eget sem vel leo ultrices bibendum.
-    Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-    Curabitur auctor semper nulla donec varius orci eget risus.
-    Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-    Duis eget orci sit amet orci dignissim rutrum.
+Numerous recent X-ray observations of coronal loops in both active regions (ARs) and solar flares have shown clearly that elemental abundances vary with time.  Over the course of a flare, they have been found to move from coronal values towards photospheric values near the flare peak, before slowly returning to coronal values during the gradual phase.  Coronal loop models typically assume that the elemental abundances are fixed, however.  In this work, we introduce a time-variable abundance factor into the 0D \texttt{ebtel++} code that models the changes due to chromospheric evaporation in order to understand how this affects coronal loop cooling.  We find that the for strong heating events ($\gtrsim$ 1 erg s$^{-1}$ cm$^{-3}$), the abundances quickly tend towards photospheric values.  For smaller heating rates, the abundances fall somewhere between coronal and photospheric values, causing the loop to cool more quickly than the time-fixed photospheric cases (typical flare simulations) and more slowly than time-fixed coronal cases (typical AR simulations).  This suggests heating rates in quiescent AR loops no larger than $\approx 0.1$ erg s$^{-1}$ cm$^{-3}$ to be consistent with recent measurements of abundance factors $f \gtrsim 2$.  
 \end{abstract}
+
+\keywords{Sun: atmosphere; Sun: corona; Sun: transition region}
+
+
 
 % Main body with filler text
 \section{Introduction}

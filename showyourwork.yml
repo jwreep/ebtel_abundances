@@ -45,7 +45,7 @@ optimize_caching: false
 # Overleaf sync settings
 overleaf:
   # Overleaf project ID (blank = disabled)
-  id: 
+  id: 663aaf8db079060d2a2881a2
   # Perform sync on GitHub Actions?
   gh_actions_sync: true
   # List of files to push to Overleaf

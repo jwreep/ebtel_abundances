@@ -4,6 +4,7 @@
 \usepackage{subfigure}  
 \usepackage{amsmath}
 \usepackage{hyperref}
+\usepackage{microtype}
 
 \sloppy  % citations were over-running the margins of a column, this fixes that
 
@@ -54,7 +55,7 @@ On the other hand, bulk flows between the chromosphere and corona carry both hig
 
 \section{Modeling Time-Variable Abundance}
 
-We use the \texttt{ebtel++} code\footnote{https://github.com/rice-solar-physics/ebtelPlusPlus} \citep{barnes2016} to model the hydrodynamics and the effects of time-variable elemental abundances in a coronal loop.  The code solves the zero-dimensional (coronally-averaged) hydrodynamics equations as a function of time for a coronal loop \citep{klimchuk2008,cargill2012a,cargill2012b}.  Because of the code's extreme speed, it can run parameter surveys within seconds, and generally compares well with higher dimensional models \citep{barnes2016}.  This makes it a powerful tool to understand the importance of several physical effects in various regimes.  
+We use the \texttt{ebtel++} code\footnote{\url{https://github.com/rice-solar-physics/ebtelPlusPlus}} \citep{barnes2016} to model the hydrodynamics and the effects of time-variable elemental abundances in a coronal loop.  The code solves the zero-dimensional (coronally-averaged) hydrodynamics equations as a function of time for a coronal loop \citep{klimchuk2008,cargill2012a,cargill2012b}.  Because of the code's extreme speed, it can run parameter surveys within seconds, and generally compares well with higher dimensional models \citep{barnes2016}.  This makes it a powerful tool to understand the importance of several physical effects in various regimes.  
 
 We have modified \texttt{ebtel++} to include time-variable abundances as follows.  We must first calculate how the abundance factor $f(t)$ changes as flows carry plasma into the corona.  Using that, we then incorporate it into the bolometric radiative loss rate, which dominates the cooling for much of a loop's lifetime.  The total radiative losses are given by $n^{2} \Lambda(T, n, f)$, where $\Lambda(T, n, f)$ is the radiative loss rate per unit emission measure.  To properly calculate the radiative losses, we must update $\Lambda(T, n, f)$ as each of the temperature $T$, density $n$, and abundance factor $f$ changes with time.
 
@@ -134,9 +135,6 @@ In this work, we have not attempted to include the changes in abundances due to 
 
 Finally, we have implemented this in the 0D \texttt{ebtel++} primarily as a test for its importance in loop evolution.  Higher dimensional models, however, could simulate not only the time variability but also spatial variability.  Spatial variations of abundances are observed regularly in ARs and flares \citep{doschek2018,baker2021,to2021,long2024}.  While the current model does not address this, it would be straightforward to extend this work to higher dimensions.  
 
-\nopagebreak
-
-\leavevmode \newline
 
 \begin{acknowledgements}
 At the time of writing, the implementation into \texttt{ebtel++} is publicly available as an unmerged pull request on GitHub: \url{https://github.com/rice-solar-physics/ebtelPlusPlus/pull/87}.

@@ -1,10 +1,13 @@
+name:
+  ebtel_abundances
+channel_priority: strict
 channels:
+  - conda-forge
   - defaults
-
 dependencies:
-  - defaults::pip=24.0
-  - defaults::python=3.10.14
-  - defaults::numpy==1.26.4
+  - pip=24.0
+  - python=3.10.14
+  - numpy==1.26.4
   - pip:
       - matplotlib==3.8.4
       - showyourwork==0.4.2

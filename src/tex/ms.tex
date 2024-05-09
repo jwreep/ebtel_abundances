@@ -1,12 +1,6 @@
 % Define document class
 \documentclass[twocolumn]{aastex631}
 \usepackage{showyourwork}
-\usepackage{subfigure}  
-\usepackage{amsmath}
-\usepackage{hyperref}
-\usepackage{microtype}
-
-\sloppy  % citations were over-running the margins of a column, this fixes that
 
 \shorttitle{Time-Variable Elemental Abundances in Loops}
 \shortauthors{Reep et al.}
@@ -18,18 +12,22 @@
 \title{Modeling Time-Variable Elemental Abundances in Coronal Loop Simulations}
 
 % Author list
-\author[0000-0003-4739-1152]{Jeffrey W. Reep}
+%\author[0000-0003-4739-1152]{Jeffrey W. Reep}
+\author{Jeffrey W. Reep}
 \affiliation{Institute for Astronomy, University of Hawai'i at M\=anoa, Pukalani, HI 96768}
 \email{reep@hawaii.edu}
 
-\author[0000-0002-7983-3851]{John Unverferth}
+%\author[0000-0002-7983-3851]{John Unverferth}
+\author{John Unverferth}
 \affiliation{National Research Council Postdoc at the Naval Research Laboratory, Washington, DC 20375}
 
-\author[0000-0001-9642-6089]{Will T. Barnes}
+%\author[0000-0001-9642-6089]{Will T. Barnes}
+\author{Will T. Barnes}
 \affiliation{NASA Goddard Space Flight Center, Heliophysics Sciences Division, Greenbelt, MD 20771}
 \affiliation{Department of Physics, American University, Washington, DC 20016}
 
-\author[0000-0001-7754-0804]{Sherry Chhabra}
+%\author[0000-0001-7754-0804]{Sherry Chhabra}
+\author{Sherry Chhabra}
 \affiliation{George Mason University, Fairfax, VA, 22030}
 
 % Abstract 
@@ -71,7 +69,7 @@ We now examine the effect of time-variable abundance on the hydrodynamics of cor
 
 Figure \ref{fig:L40} shows a comparison of evolution for 40 Mm loops, with the electrons heated by a 20 s heating pulse on a triangular profile (10 s rise, 10 s decay), for maximum heating rates of 0.01, 0.03, 0.1, and 1.0 erg s$^{-1}$ cm$^{-3}$ (each row, respectively).  The columns respectively show the evolution of the electron temperature $T_{e}(t)$, density $n(t)$, and abundance factor $f(t)$.  The different lines show the three cases of abundances: time-variable abundance factor (blue), time-fixed photospheric abundances ($f=1$, orange), and time-fixed coronal abundances ($f=4$, green).  
 \begin{figure*}
-    \script{render_all.py}
+    \script{render_figure1.py}
     \begin{centering}
     \includegraphics[width=0.32\linewidth]{figures/temperature_L40_H0.01_t20.png}
     \includegraphics[width=0.32\linewidth]{figures/density_L40_H0.01_t20.png}
@@ -94,7 +92,7 @@ It is clear that the heating rates, and thus the strength of chromospheric evapo
 
 In Figure \ref{fig:L80}, we show a similar comparison with 80 Mm loops.  Since the cooling time depends on loop length ($\propto L^{5/6}$, \citealt{cargill1995}), we expect that the differences should be exaggerated here.  While the overall trends are similar to the previous case, there are a few differences worth noting.  The first is that the coronal density does not grow as large with the same heating rates, and as a consequence the abundance factor remains somewhat higher.  The second is that the duration of evaporation is somewhat longer, as the flows must travel a longer distance to fill the loop, so the rate of change of the abundance factor is generally slower.  
 \begin{figure*}
-%    \script{render_figure2.py}
+    \script{render_figure2.py}
     \centering
     \includegraphics[width=0.32\linewidth]{figures/temperature_L80_H0.01_t20.png}
     \includegraphics[width=0.32\linewidth]{figures/density_L80_H0.01_t20.png}
@@ -105,7 +103,7 @@ In Figure \ref{fig:L80}, we show a similar comparison with 80 Mm loops.  Since t
     \includegraphics[width=0.32\linewidth]{figures/temperature_L80_H0.1_t20.png}
     \includegraphics[width=0.32\linewidth]{figures/density_L80_H0.1_t20.png}
     \includegraphics[width=0.32\linewidth]{figures/abundance_L80_H0.1_t20.png}
-    \includegraphics[width=0.32\linewidth]{figures/temperature_L40_H1.0_t20.png}
+    \includegraphics[width=0.32\linewidth]{figures/temperature_L80_H1.0_t20.png}
     \includegraphics[width=0.32\linewidth]{figures/density_L80_H1.0_t20.png}
     \includegraphics[width=0.32\linewidth]{figures/abundance_L80_H1.0_t20.png}
     \caption{Similar to Figure \ref{fig:L40}, showing the results for an 80 Mm loop heated impulsively for 20 s.  \label{fig:L80}}
@@ -113,7 +111,7 @@ In Figure \ref{fig:L80}, we show a similar comparison with 80 Mm loops.  Since t
 
 We finally show two examples of nanoflare trains \citep{reep2013,cargill2014,barnes2016b}, where a series of nanoflare heating events occur in close succession before ceasing and allowing the loop to cool.  Figure \ref{fig:train} shows two cases for loops of 40 and 80 Mm, with 5 heating events of 0.01 erg s$^{-1}$ cm$^{-3}$, spaced 300 s apart.  The loops oscillate around temperatures of around 2.5 and 3.5 MK, respectively, during the heating period, before rapidly cooling.  In both cases, the evaporation is prolonged for more than 30 minutes, causing the abundance factor $f$ to fall successively with each heating event (and thus evaporation event), reaching a minimum of around $f=2$.  As with single heating events, the effect of time-variable abundance on temperature and density becomes most noticeable during the cooling phase.
 \begin{figure*}
-%    \script{render_figure3.py}
+    \script{render_figure3.py}
     \centering
     \includegraphics[width=0.47\linewidth]{figures/temperature_train_L40_H0.01_t20.png}
     \includegraphics[width=0.47\linewidth]{figures/abundance_train_L40_H0.01_t20.png}

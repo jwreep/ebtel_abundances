@@ -8,7 +8,7 @@ from plot import plot_figures
 from read import read_ebtel_file
 
 # Call the script to run all of the simulations
-os.system("python run_all_ebtel.py")
+os.system("python "+ str(paths.scripts / "run_all_ebtel.py"))
 
 # Plot cases with single heating events first
 lengths = ['40', '80']

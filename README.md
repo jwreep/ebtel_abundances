@@ -2,7 +2,14 @@
 
 A paper by Jeffrey Reep, John Unverferth, Will Barnes, and Sherry Chhabra describing a method to add time-variable elemental abundances due to chromospheric evaporation into coronal loop simulations.
 
-In order to compile this paper, the ebtel++ code is required to be installed (using this pull request: https://github.com/rice-solar-physics/ebtelPlusPlus/pull/87).  
+In order to compile this paper, 
+
+(1) Install the ebtel++ code (using this pull request: https://github.com/rice-solar-physics/ebtelPlusPlus/pull/87).  
+
+(2) Edit the variable `ebtel_root` in `/src/scripts/paths.py` to point to the local installation of ebtel++
+
+(3) From the main directory, type `showyourwork build`
+
 
 <p align="center">
 <a href="https://github.com/showyourwork/showyourwork">

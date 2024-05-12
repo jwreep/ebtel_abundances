@@ -30,4 +30,4 @@ output = tex / "output"
 
 # Absolute path to the ebtel++ code
 # Replace this with the correct "path/to/ebtel"
-ebtel_root = Path("/Users/reep/Documents/Forks/ebtelPlusPlus")
+ebtel_root = Path("/path/to/ebtelPlusPlus")

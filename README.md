@@ -8,7 +8,9 @@ In order to compile this paper,
 
 (2) Edit the variable `ebtel_root` in `/src/scripts/paths.py` to point to the local installation of ebtel++
 
-(3) From the main directory, type `showyourwork build`
+(3) Install the `showyourwork` package (preferably in its own conda environment)
+
+(4) From the main directory, type `showyourwork build`
 
 
 <p align="center">

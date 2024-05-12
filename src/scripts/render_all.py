@@ -2,13 +2,15 @@
 Script to render the data into figure data
 
 """
-import numpy as np
+import os
 import paths
 from plot import plot_figures
 from read import read_ebtel_file
 
+# Call the script to run all of the simulations
+os.system("python run_all_ebtel.py")
 
-# Let's calculate some cases with single heating events first
+# Plot cases with single heating events first
 lengths = ['40', '80']
 heat = ['1.0','0.1','0.03','0.01']
 duration = ['20']
@@ -31,7 +33,7 @@ for L in lengths:
             plot_figures(time, temperature, density, L, H, t)
             
             
-# Let's calculate a couple of nanoflare trains for comparison
+# Then plot the nanoflare trains for comparison
 lengths = ['40', '80']
 heat = ['0.01']
 duration = ['20']

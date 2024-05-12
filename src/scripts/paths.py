@@ -27,3 +27,7 @@ figures = tex / "figures"
 
 # Absolute path to the `src/tex/output` folder (contains other user-defined output)
 output = tex / "output"
+
+# Absolute path to the ebtel++ code
+# Replace this with the correct "path/to/ebtel"
+ebtel_root = Path("/Users/reep/Documents/Forks/ebtelPlusPlus")

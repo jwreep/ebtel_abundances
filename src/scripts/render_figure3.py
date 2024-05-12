@@ -2,11 +2,13 @@
 Script to render the data into Figure 3
 
 """
-import numpy as np
+import os
 import paths
 from plot import plot_figures
 from read import read_ebtel_file
 
+# Call the script to run the simulations for Figure 3
+os.system("python run_ebtel_figure3.py")
 
 # Let's calculate a couple of nanoflare trains for comparison
 lengths = ['40', '80']

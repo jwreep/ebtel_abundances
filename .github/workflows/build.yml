@@ -19,6 +19,7 @@ jobs:
         with:
           repository: jwreep/ebtelPlusPlus
           ref: main
+          path: ebtelPlusPlus # Store in $GITHUB_WORKSPACE/ebtelPlusPlus
 
       - name: Install Python
         uses: actions/setup-python@v4
@@ -33,7 +34,7 @@ jobs:
 
       - name: Install ebtel++
         run: |
-          cd ebtelPlusPlus
+          cd $GITHUB_WORKSPACE/ebtelPlusPlus
           scons
           cd ..
         

@@ -29,6 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
           conda config --set channel_priority strict
+          conda config --env --append channels conda-forge --append channels defaults
           pip install scons
           sudo apt-get update
           sudo apt-get install libboost-all-dev

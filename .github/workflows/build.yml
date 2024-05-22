@@ -14,12 +14,36 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Clone ebtel++
+        uses: actions/checkout@v4
+        with:
+          repository: jwreep/ebtelPlusPlus
+          ref: main
+
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          pip install scons
+          sudo apt-get update
+          sudo apt-get install libboost-all-dev
+
+      - name: Install ebtel++
+        run: |
+          cd ebtelPlusPlus
+          scons
+          cd ..
+        
       - name: Build the article PDF
         id: build
         with:
           showyourwork-spec: git+https://github.com/showyourwork/showyourwork
         uses: showyourwork/showyourwork-action@v1
         env:
+          EBTELPLUSPLUS_DIR: ${{ github.workspace }}/ebtelPlusPlus
           SANDBOX_TOKEN: ${{ secrets.SANDBOX_TOKEN }}
           OVERLEAF_EMAIL: ${{ secrets.OVERLEAF_EMAIL }}
           OVERLEAF_PASSWORD: ${{ secrets.OVERLEAF_PASSWORD }}

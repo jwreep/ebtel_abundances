@@ -19,6 +19,6 @@ jobs:
         with:
           showyourwork-spec: git+https://github.com/showyourwork/showyourwork
         uses: showyourwork/showyourwork-action@v1
-          SANDBOX_TOKEN: ${{ secrets.SANDBOX_TOKEN }}
+#          SANDBOX_TOKEN: ${{ secrets.SANDBOX_TOKEN }}
           OVERLEAF_EMAIL: ${{ secrets.OVERLEAF_EMAIL }}
           OVERLEAF_PASSWORD: ${{ secrets.OVERLEAF_PASSWORD }}

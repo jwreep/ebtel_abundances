@@ -2,6 +2,7 @@
 Exposes common paths useful for manipulating datasets and generating figures.
 
 """
+import os
 from pathlib import Path
 
 # Absolute path to the top level of the repository
@@ -29,5 +30,4 @@ figures = tex / "figures"
 output = tex / "output"
 
 # Absolute path to the ebtel++ code
-# Replace this with the correct "path/to/ebtel"
-ebtel_root = Path("/path/to/ebtelPlusPlus")
+ebtel_root = Path(os.environ['EBTELPLUSPLUS_DIR'])

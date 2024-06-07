@@ -6,11 +6,13 @@ In order to compile this paper,
 
 (1) Install the ebtel++ code (using this pull request: https://github.com/rice-solar-physics/ebtelPlusPlus/pull/87).  
 
-(2) Define a system variable $EBTELPLUSPLUS_DIR to point to the local installation of ebtel++
+(2) Build ebtel++ by running `scons` at the command line
 
-(3) Install the `showyourwork` package (preferably in its own conda environment)
+(3) Define a system variable $EBTELPLUSPLUS_DIR to point to the local installation of ebtel++
 
-(4) From the main directory, type `showyourwork build`
+(4) Install the `showyourwork` package (preferably in its own conda environment)
+
+(5) From the main directory, type `showyourwork build`
 
 
 <p align="center">

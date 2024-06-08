@@ -8,7 +8,7 @@
 
 % Begin!
 \begin{document}
-
+ 
 % Title
 \title{Modeling Time-Variable Elemental Abundances in Coronal Loop Simulations}
 
@@ -42,9 +42,9 @@ Numerous recent X-ray observations of coronal loops in both active regions (ARs)
 \section{Introduction}
 \label{sec:intro}
 
-Coronal loop models to date have fixed the elemental abundances both in space and time, using typically coronal abundances in quiescent loops or photospheric abundances in flare loops.  These abundances are used to calculate the bolometric radiative loss rate that directly impacts the cooling of the plasma.  Many recent X-ray observations of flares, however, clearly show that elemental abundances are not fixed and vary with time over the duration of the flare \citep{mondal2021, delzanna2021, mithun2022, nama2023, suarez2023, woods2023, rao2023, kepa2023}.  Similar observations have also found that the abundances of active regions (ARs) vary relatively quickly as well \citep{mondal2023}.
+Coronal loop models to date have fixed the elemental abundances both in space and time, using typically coronal abundances in quiescent loops or photospheric abundances in flare loops.  These abundances are used to calculate the bolometric radiative loss rate that directly impacts the cooling of the plasma.  Many recent X-ray observations of flares, however, clearly show that elemental abundances are not fixed and vary with time over the duration of the flare \citep{mondal2021, delzanna2021, mithun2022, nama2023, suarez2023, woods2023, rao2023, kepa2023}.  Similar observations have also found that the abundances of active regions (ARs) vary relatively quickly as well \citep{mondal2023}. 
 
-There are two general mechanisms that could likely cause the change in elemental abundances: (1) preferential acceleration of ions, not neutrals, in the chromosphere, and (2) flows.
+There are two general mechanisms that could likely cause the change in elemental abundances: (1) preferential acceleration of ions, not neutrals, in the chromosphere, and (2) flows.  
 
 The preferential acceleration of ions in the chromosphere is the cause of the first ionization potential effect (FIP effect), where Alfv\'en waves cause a ponderomotive force to accelerate ions from the chromosphere into the corona, while not affecting neutrals \citep{laming2015,laming2021}.  Hence, elements with low FIP ($\lesssim 10$ eV, \textit{e.g.} iron, calcium) that are ionized in the chromosphere are accelerated and become enhanced in coronal loops, while elements with high FIP ($\gtrsim 10$ eV, \textit{e.g.} helium, argon) are not, and their abundance generally does not vary with height.  Coronal loops within long-lived ARs typically show enhanced abundances of low-FIP elements (``coronal abundances'') relative to their values in the photosphere (``photospheric abundances'') as a result \citep{pottasch1964,mckenzie1992,delzanna2003,delzanna2014}.  
 
@@ -133,7 +133,7 @@ In an AR, the abundances can also vary with time, depending on the strength of h
 
 In this work, we have not attempted to include the changes in abundances due to ponderomotive forces of Alfv\'en waves propagating from the corona to chromosphere, which is thought to be the cause of the FIP effect \citep{laming2015}, where low FIP elements like iron are generally enhanced in coronal loops.  Observations of such waves have been measured (\textit{e.g.} \citealt{murabito2024}), and shown to be consistent with producing the FIP effect.  However, it is not clear what timescales are required to produce the fractionation of elements, as the modeling work to date has been time-independent.  Assuming that the time-scales are short, then this is an important effect that should additionally be incorporated to properly model time-variable abundances.  One additional complexity is that for large enough Poynting fluxes, the resistive dissipation of Alfv\'en waves in the chromosphere would also cause significant amounts of evaporation \citep{reep2016}.  Estimates of Poynting fluxes suggest that waves might carry up to $\approx 10^{10}$ erg s$^{-1}$ cm$^{-2}$ in flares \citep{russell2023}, which is large enough to drive explosive evaporation and produce photospheric abundances in general, but this is an upper limit.   The net effect on elemental abundances is not clear, therefore, and more work is required to determine the interplay.  
 
-Finally, we have implemented this in the 0D \texttt{ebtel++} primarily as a test for its importance in loop evolution.  Higher dimensional models, however, could simulate not only the time variability but also spatial variability.  Spatial variations of abundances are observed regularly in ARs and flares \citep{doschek2018,baker2021,to2021,long2024}.  While the current model does not address this, it would be straightforward to extend this work to higher dimensions.  Since evaporation is a ubiquitous process in the solar corona, this effect is critical for (magneto)hydrodynamic simulations. 
+Finally, we have implemented this in the 0D \texttt{ebtel++} primarily as a test for its importance in loop evolution.  Higher dimensional models, however, could simulate not only the time variability but also spatial variability.  Spatial variations of abundances are observed regularly in ARs and flares \citep{doschek2018,baker2021,to2021,long2024}.  While the current model does not address this, it would be straightforward to extend this work to higher dimensions.  Since evaporation is a ubiquitous process in the solar corona, this effect is critical for (magneto)hydrodynamic simulations.  
 
 
 \begin{acknowledgements}

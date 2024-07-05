@@ -4,7 +4,7 @@ A paper by Jeffrey Reep, John Unverferth, Will Barnes, and Sherry Chhabra descri
 
 In order to compile this paper, 
 
-(1) Install the ebtel++ code (using this pull request: https://github.com/rice-solar-physics/ebtelPlusPlus/pull/87).  
+(1) Install the ebtel++ code (https://github.com/rice-solar-physics/ebtelPlusPlus).  
 
 (2) Build ebtel++ by running `scons` at the command line
 

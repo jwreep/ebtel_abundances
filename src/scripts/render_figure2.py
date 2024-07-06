@@ -2,13 +2,13 @@
 Script to render the data into Figure 2
 
 """
-import os
+#import os
 import paths
 from plot import plot_figures
 from read import read_ebtel_file
 
 # Call the script to run the simulations for Figure 2
-os.system("python "+ str(paths.scripts / "run_ebtel_figure2.py"))
+#os.system("python "+ str(paths.scripts / "run_ebtel_figure2.py"))
 
 # Let's calculate some cases with single heating events first
 lengths = ['80']

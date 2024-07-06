@@ -9,6 +9,8 @@ import subprocess
 import paths
 from configure import read_initial_configuration, write_new_configuration
 
+paths.figure2.mkdir(parents=True, exist_ok=True)
+
 initial_lines = read_initial_configuration()
 
 # single heating events

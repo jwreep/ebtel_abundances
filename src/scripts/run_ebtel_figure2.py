@@ -26,20 +26,20 @@ for L in lengths:
             os.chdir(paths.data)
             write_new_configuration(initial_lines, length = L, radiation = 'variable',
                                     heating_rate = [H], heating_duration = [t], 
-                                    output_filename = paths.data / vfile)
+                                    output_filename = paths.figure2 / vfile)
             os.chdir(paths.ebtel_root)
             subprocess.run(["bin/ebtel++.run"])
             
             os.chdir(paths.data)
             write_new_configuration(initial_lines, length = L, radiation = 'photospheric',
                                     heating_rate = [H], heating_duration = [t], 
-                                    output_filename = paths.data / pfile)
+                                    output_filename = paths.figure2 / pfile)
             os.chdir(paths.ebtel_root)
             subprocess.run(["bin/ebtel++.run"])
             
             os.chdir(paths.data)
             write_new_configuration(initial_lines, length = L, radiation = 'coronal',
                                     heating_rate = [H], heating_duration = [t], 
-                                    output_filename = paths.data / cfile)
+                                    output_filename = paths.figure2 / cfile)
             os.chdir(paths.ebtel_root)
             subprocess.run(["bin/ebtel++.run"])

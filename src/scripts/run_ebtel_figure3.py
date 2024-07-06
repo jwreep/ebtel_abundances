@@ -27,7 +27,7 @@ for L in lengths:
                                     heating_rate = [H, H, H, H, H], 
                                     heating_duration = [t, t, t, t, t],
                                     heating_start = ['0','300','600','900','1200'],
-                                    output_filename = paths.data / vfile)
+                                    output_filename = paths.figure3 / vfile)
             os.chdir(paths.ebtel_root)
             subprocess.run(["bin/ebtel++.run"])
             
@@ -36,7 +36,7 @@ for L in lengths:
                                     heating_rate = [H, H, H, H, H], 
                                     heating_duration = [t, t, t, t, t],
                                     heating_start = ['0','300','600','900','1200'],
-                                    output_filename = paths.data / pfile)
+                                    output_filename = paths.figure3 / pfile)
             os.chdir(paths.ebtel_root)
             subprocess.run(["bin/ebtel++.run"])
             
@@ -45,6 +45,6 @@ for L in lengths:
                                     heating_rate = [H, H, H, H, H], 
                                     heating_duration = [t, t, t, t, t],
                                     heating_start = ['0','300','600','900','1200'],
-                                    output_filename = paths.data / cfile)
+                                    output_filename = paths.figure3 / cfile)
             os.chdir(paths.ebtel_root)
             subprocess.run(["bin/ebtel++.run"])

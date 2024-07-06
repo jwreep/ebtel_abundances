@@ -31,6 +31,12 @@ datasets:
 
 # Custom file dependencies
 dependencies:
+  src/scripts/render_figure1.py:
+    - src/data/Figure1/
+  src/scripts/render_figure2.py:
+    - src/data/Figure2/
+  src/scripts/render_figure3.py:
+    - src/data/Figure3/
   # src/scripts/my_script.py:
   #   - src/data/dataset_for_my_script.dat
   # src/tex/ms.tex:

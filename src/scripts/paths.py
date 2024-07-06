@@ -13,6 +13,9 @@ src = root / "src"
 
 # Absolute path to the `src/data` folder (contains datasets)
 data = src / "data"
+figure1 = data / "Figure1"
+figure2 = data / "Figure2"
+figure3 = data / "Figure3"
 
 # Absolute path to the `src/static` folder (contains static images)
 static = src / "static"

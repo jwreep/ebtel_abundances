@@ -48,7 +48,7 @@ def plot_figures(time, temperature, density, L, H, t, filename=None, xlim=None, 
     plt.grid('-')
     if xlim is not None:
         plt.xlim(xlim)
-    if show_legend':
+    if show_legend:
         plt.legend(fontsize=18)
     plt.savefig(paths.figures / ('temperature_' + filename), dpi=300)   
     plt.close()

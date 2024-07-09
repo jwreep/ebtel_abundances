@@ -30,4 +30,9 @@ for L in lengths:
             temperature = [T_e_v, T_e_p, T_e_c]
             density = [n_v, n_p, n_c]
             
-            plot_figures(time, temperature, density, L, H, t)
+            if H == '0.01':
+                show_legend = True
+            else:
+                show_legend = False
+            
+            plot_figures(time, temperature, density, L, H, t, show_legend=show_legend)

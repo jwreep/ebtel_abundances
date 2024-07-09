@@ -29,6 +29,12 @@ for L in lengths:
             temperature = [T_e_v, T_e_p, T_e_c]
             density = [n_v, n_p, n_c]
             
+            if L == '40':
+                show_legend = True
+            else:
+                show_legend = False
+
+            
             plot_figures(time, temperature, density, L, H, t, 
                             filename = 'train_L'+L+'_H'+H+'_t'+t+'.png',
-                            xlim = [0, 40])
+                            xlim = [0, 40], show_legend=show_legend)

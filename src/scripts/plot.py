@@ -6,7 +6,7 @@ import paths
 import numpy as np
 from matplotlib import pyplot as plt
 
-def plot_figures(time, temperature, density, L, H, t, filename=None, xlim=None):
+def plot_figures(time, temperature, density, L, H, t, filename=None, xlim=None, show_legend=False):
     """
     Plot the temperature, density, and abundance factor as a function of time for
     a given set of simulations
@@ -48,7 +48,7 @@ def plot_figures(time, temperature, density, L, H, t, filename=None, xlim=None):
     plt.grid('-')
     if xlim is not None:
         plt.xlim(xlim)
-    if H == '0.01' and L == '40':
+    if show_legend':
         plt.legend(fontsize=18)
     plt.savefig(paths.figures / ('temperature_' + filename), dpi=300)   
     plt.close()

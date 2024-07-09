@@ -53,7 +53,7 @@ On the other hand, bulk flows between the chromosphere and corona carry both hig
 
 \section{Modeling Time-Variable Abundance}
 
-We use the \texttt{ebtel++} code\footnote{\url{https://github.com/rice-solar-physics/ebtelPlusPlus}} \citep{barnes2016} to model the hydrodynamics and the effects of time-variable elemental abundances in a coronal loop.  The code solves the zero-dimensional (coronally-averaged) hydrodynamics equations as a function of time for a coronal loop \citep{klimchuk2008,cargill2012a,cargill2012b}.  Because of the code's extreme speed, it can run parameter surveys within seconds, and generally compares well with higher dimensional models \citep{barnes2016}.  This makes it a powerful tool to understand the importance of several physical effects in various regimes.  
+We use the \texttt{ebtel++} code\footnote{\url{https://github.com/rice-solar-physics/ebtelPlusPlus}, version 0.2 \url{https://zenodo.org/records/12675386}.} \citep{barnes2016} to model the hydrodynamics and the effects of time-variable elemental abundances in a coronal loop.  The code solves the zero-dimensional (coronally-averaged) hydrodynamics equations as a function of time for a coronal loop \citep{klimchuk2008,cargill2012a,cargill2012b}.  Because of the code's extreme speed, it can run parameter surveys within seconds, and generally compares well with higher dimensional models \citep{barnes2016}.  This makes it a powerful tool to understand the importance of several physical effects in various regimes.  
 
 We have modified \texttt{ebtel++} to include time-variable abundances as follows.  We must first calculate how the abundance factor $f(t)$ changes as flows carry plasma into the corona.  Using that, we then incorporate it into the bolometric radiative loss rate, which dominates the cooling for much of a loop's lifetime.  The total radiative losses are given by $n^{2} \Lambda(T, n, f)$, where $\Lambda(T, n, f)$ is the radiative loss rate per unit emission measure.  To properly calculate the radiative losses, we must update $\Lambda(T, n, f)$ as each of the temperature $T$, density $n$, and abundance factor $f$ changes with time.
 
@@ -138,12 +138,12 @@ Finally, we have implemented this in the 0D \texttt{ebtel++} primarily as a test
 
 
 \section*{Acknowledgments}
-\textbf{All of the tools used to produce this paper are open-source.}  The implementation into \texttt{ebtel++} is publicly available on GitHub: \url{https://github.com/rice-solar-physics/ebtelPlusPlus}.  
+\textbf{All of the tools used to produce this paper are open-source.  The implementation into \texttt{ebtel++} is publicly available on GitHub, \url{https://github.com/rice-solar-physics/ebtelPlusPlus}, or on Zenodo, \url{https://zenodo.org/records/12675386}.}  
 
-This paper is fully reproducible with the \href{https://github.com/showyourwork/showyourwork}{\showyourwork} package, and can be downloaded from \url{https://github.com/jwreep/ebtel_abundances}.  \textbf{This package strives for full reproducibility and transparency in science.  Each figure in this paper contains a hyperlink with the Github logo that points to the script used to generate the plots in that figure.  Additionally, the whole paper can be generated with a single command (`showyourwork build') that will run the \texttt{ebtel++} simulations, read in the data, and produce the figures.  Users can then additionally reconfigure the simulations, the plots, or the scripts to their own liking to validate or extend this research.}
+This paper is fully reproducible with the \href{https://github.com/showyourwork/showyourwork}{\showyourwork} package, and can be downloaded from \url{https://github.com/jwreep/ebtel_abundances}.  \textbf{This package strives for full reproducibility and transparency in science.  Each figure in this paper contains a hyperlink with the Github logo that points to the script used to generate the plots in that figure.  Additionally, the whole paper can be generated with a single command (`showyourwork build') that will run the \texttt{ebtel++} simulations, read in the data, and produce the figures.  Users can then additionally reconfigure the simulations, the plots, or the scripts to their own liking to validate or extend this research.  The exact data used to produce the figures has been cached on Zenodo: \url{https://zenodo.org/records/12695938}.}
 
 \software{
-\texttt{ebtel++} (\url{https://github.com/rice-solar-physics/ebtelPlusPlus}),
+\texttt{ebtel++}, v.0.2 \citep{barnes2024},
 \texttt{matplotlib} \citep{hunter_matplotlib:_2007}, \texttt{showyourwork!} \citep{luger2021}
 }
 

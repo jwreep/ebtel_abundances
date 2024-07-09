@@ -1,6 +1,6 @@
 # Modeling Time-Variable Elemental Abundances in Coronal Loop Simulations
 
-A paper by Jeffrey Reep, John Unverferth, Will Barnes, and Sherry Chhabra describing a method to add time-variable elemental abundances due to chromospheric evaporation into coronal loop simulations.
+A paper by Jeffrey Reep, John Unverferth, Will Barnes, and Sherry Chhabra describing a method to add time-variable elemental abundances due to chromospheric evaporation into coronal loop simulations.  An up-to-date preprint is available on the `main-pdf` branch of this repository.  
 
 In order to compile this paper, 
 
@@ -13,6 +13,8 @@ In order to compile this paper,
 (4) Install the `showyourwork` package (preferably in its own conda environment)
 
 (5) From the main directory, type `showyourwork build`
+
+This paper was produced with version 0.2 of ebtel++ (https://zenodo.org/records/12675386), and the data to produce the figures has been cached on Zenodo (https://sandbox.zenodo.org/records/80337).  
 
 
 <p align="center">

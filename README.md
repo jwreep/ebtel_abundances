@@ -14,7 +14,7 @@ In order to compile this paper,
 
 (5) From the main directory, type `showyourwork build`
 
-This paper was produced with version 0.2 of ebtel++ (https://zenodo.org/records/12675386), and the data to produce the figures has been cached on Zenodo (https://sandbox.zenodo.org/records/80337).  
+This paper was produced with version 0.2 of ebtel++ (https://zenodo.org/records/12675386), and the data to produce the figures has been cached on Zenodo (https://zenodo.org/records/12695938).  
 
 
 <p align="center">
